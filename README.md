@@ -1,4 +1,4 @@
-# Monitoraggio pannelli solari tramite Arduino
+# Tirocinio solar tracking
 
 ## Bibalo Simone (mat. 143184)
 
