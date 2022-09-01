@@ -38,21 +38,21 @@ float loadvoltage = 0.0;
 
 /*servo fotodiodi*/
 
-Servo servo;   // Create a servo object to control the servo
+Servo servo;   
 
-int eLDRPin = A0; // Assign pins to the LDR's
+int eLDRPin = A0; 
 int wLDRPin = A1;
-int eastLDR = 0; //Create variables to store to LDR readings
+int eastLDR = 0; 
 int westLDR = 0;
-int difference = 0; //Create a variable to compare the two LDR's
-int servoSet = 70; //Variable for position of servo - will be different for each device
+int difference = 0; 
+int servoSet = 70; 
 
 /*-------------------------------------------------------------------*/
 
 
 void setup() {
-  // put your setup code here, to run once:
- servo.attach(5);   //attaches the servo object to PWM pin 
+  
+ servo.attach(5);   
 
 Wire.begin(8);                /* apertura i2c bus con indirizzo 8 */
  ina219.begin(); 
@@ -211,12 +211,12 @@ void gpsdisplayInfo()
 /*-------------------------------------------------------------------*/
 void servomotor() {
   
-  eastLDR = analogRead(eLDRPin); //Read the LDR values
+  eastLDR = analogRead(eLDRPin); 
   westLDR = analogRead(wLDRPin);
 
-  difference = eastLDR - westLDR ; //Check the difference 
+  difference = eastLDR - westLDR ; 
   
-  if (difference > 100) {          //Send the panel towards the LDR with a higher reading
+  if (difference > 100) {         
   
       if (servoSet <= 120) {
       servoSet =servoSet+10 ;
