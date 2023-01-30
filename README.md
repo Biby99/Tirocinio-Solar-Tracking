@@ -1,4 +1,4 @@
-# Tirocinio solar tracking
+# Tirocinio solar tracking with Arduino+NodeMCU
 
 ## Bibalo Simone (mat. 143184)
 
